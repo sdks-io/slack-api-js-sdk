@@ -12,25 +12,25 @@ Learn more about the Slack Web API: [https://api.slack.com/web](https://api.slac
 Run the following command from your project directory to install the package from npm:
 
 ```bash
-npm install slack-api-sdk@1.1.1
+npm install slack-api-sdk@1.1.2
 ```
 
-For additional package details, see the [Npm page for the slack-api-sdk@1.1.1 npm](https://www.npmjs.com/package/slack-api-sdk/v/1.1.1).
+For additional package details, see the [Npm page for the slack-api-sdk@1.1.2 npm](https://www.npmjs.com/package/slack-api-sdk/v/1.1.2).
 
 ## Initialize the API Client
 
-**_Note:_** Documentation for the client can be found [here.](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/client.md)
+**_Note:_** Documentation for the client can be found [here.](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/client.md)
 
 The following parameters are configurable for the API Client:
 
 | Parameter | Type | Description |
 |  --- | --- | --- |
-| environment | [`Environment`](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/README.md#environments) | The API environment. <br> **Default: `Environment.Production`** |
+| environment | [`Environment`](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/README.md#environments) | The API environment. <br> **Default: `Environment.Production`** |
 | timeout | `number` | Timeout for API calls.<br>*Default*: `30000` |
-| httpClientOptions | [`Partial<HttpClientOptions>`](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/http-client-options.md) | Stable configurable http client options. |
+| httpClientOptions | [`Partial<HttpClientOptions>`](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/http-client-options.md) | Stable configurable http client options. |
 | unstableHttpClientOptions | `any` | Unstable configurable http client options. |
-| logging | [`PartialLoggingOptions`](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/partial-logging-options.md) | Logging Configuration to enable logging |
-| authorizationCodeAuthCredentials | [`AuthorizationCodeAuthCredentials`](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/auth/oauth-2-authorization-code-grant.md) | The credential object for authorizationCodeAuth |
+| logging | [`PartialLoggingOptions`](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/partial-logging-options.md) | Logging Configuration to enable logging |
+| authorizationCodeAuthCredentials | [`AuthorizationCodeAuthCredentials`](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/auth/oauth-2-authorization-code-grant.md) | The credential object for authorizationCodeAuth |
 
 The API client can be initialized as follows:
 
@@ -80,7 +80,7 @@ const fileContent = fs.readFileSync(absolutePath, 'utf-8');
 const client = Client.fromJsonConfig(fileContent);
 ```
 
-See the [Configuration-Based Client Initialization](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/configuration-based-client-initialization.md) section for details.
+See the [Configuration-Based Client Initialization](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/configuration-based-client-initialization.md) section for details.
 
 ### Environment-Based Client Initialization
 
@@ -102,7 +102,7 @@ if (fs.existsSync(absolutePath)) {
 const client = Client.fromEnvironment(process.env);
 ```
 
-See the [Environment-Based Client Initialization](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/environment-based-client-initialization.md) section for details.
+See the [Environment-Based Client Initialization](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/environment-based-client-initialization.md) section for details.
 
 ## Environments
 
@@ -118,86 +118,86 @@ The SDK can be configured to use a different environment for making API calls. A
 
 This API uses the following authentication schemes.
 
-* [`slackAuth (OAuth 2 Authorization Code Grant)`](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/auth/oauth-2-authorization-code-grant.md)
+* [`slackAuth (OAuth 2 Authorization Code Grant)`](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/auth/oauth-2-authorization-code-grant.md)
 
 ## List of APIs
 
-* [Admin Apps](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/admin-apps.md)
-* [Admin Apps Approved](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/admin-apps-approved.md)
-* [Admin Apps Requests](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/admin-apps-requests.md)
-* [Admin Apps Restricted](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/admin-apps-restricted.md)
-* [Admin Conversations](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/admin-conversations.md)
-* [Admin Conversations Ekm](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/admin-conversations-ekm.md)
-* [Admin Conversations Restrict Access](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/admin-conversations-restrict-access.md)
-* [Admin Emoji](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/admin-emoji.md)
-* [Admin Invite Requests](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/admin-invite-requests.md)
-* [Admin Invite Requests Approved](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/admin-invite-requests-approved.md)
-* [Admin Invite Requests Denied](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/admin-invite-requests-denied.md)
-* [Admin Teams Admins](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/admin-teams-admins.md)
-* [Admin Teams](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/admin-teams.md)
-* [Admin Teams Owners](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/admin-teams-owners.md)
-* [Admin Teams Settings](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/admin-teams-settings.md)
-* [Admin Usergroups](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/admin-usergroups.md)
-* [Admin Users](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/admin-users.md)
-* [Admin Users Session](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/admin-users-session.md)
-* [Api](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/api.md)
-* [Apps Event Authorizations](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/apps-event-authorizations.md)
-* [Apps Permissions](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/apps-permissions.md)
-* [Apps Permissions Resources](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/apps-permissions-resources.md)
-* [Apps Permissions Scopes](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/apps-permissions-scopes.md)
-* [Apps Permissions Users](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/apps-permissions-users.md)
-* [Apps](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/apps.md)
-* [Auth](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/auth.md)
-* [Bots](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/bots.md)
-* [Calls](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/calls.md)
-* [Calls Participants](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/calls-participants.md)
-* [Chat](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/chat.md)
-* [Chat Scheduled Messages](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/chat-scheduled-messages.md)
-* [Conversations](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/conversations.md)
-* [Dialog](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/dialog.md)
-* [Dnd](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/dnd.md)
-* [Emoji](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/emoji.md)
-* [Files Comments](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/files-comments.md)
-* [Files](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/files.md)
-* [Files Remote](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/files-remote.md)
-* [Migration](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/migration.md)
-* [Oauth](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/oauth.md)
-* [Oauth V 2](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/oauth-v-2.md)
-* [Pins](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/pins.md)
-* [Reactions](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/reactions.md)
-* [Reminders](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/reminders.md)
-* [Rtm](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/rtm.md)
-* [Search](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/search.md)
-* [Stars](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/stars.md)
-* [Team](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/team.md)
-* [Team Profile](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/team-profile.md)
-* [Usergroups](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/usergroups.md)
-* [Usergroups Users](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/usergroups-users.md)
-* [Users](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/users.md)
-* [Users Profile](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/users-profile.md)
-* [Views](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/views.md)
-* [Workflows](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/controllers/workflows.md)
+* [Admin Apps](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/admin-apps.md)
+* [Admin Apps Approved](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/admin-apps-approved.md)
+* [Admin Apps Requests](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/admin-apps-requests.md)
+* [Admin Apps Restricted](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/admin-apps-restricted.md)
+* [Admin Conversations](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/admin-conversations.md)
+* [Admin Conversations Ekm](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/admin-conversations-ekm.md)
+* [Admin Conversations Restrict Access](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/admin-conversations-restrict-access.md)
+* [Admin Emoji](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/admin-emoji.md)
+* [Admin Invite Requests](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/admin-invite-requests.md)
+* [Admin Invite Requests Approved](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/admin-invite-requests-approved.md)
+* [Admin Invite Requests Denied](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/admin-invite-requests-denied.md)
+* [Admin Teams Admins](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/admin-teams-admins.md)
+* [Admin Teams](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/admin-teams.md)
+* [Admin Teams Owners](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/admin-teams-owners.md)
+* [Admin Teams Settings](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/admin-teams-settings.md)
+* [Admin Usergroups](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/admin-usergroups.md)
+* [Admin Users](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/admin-users.md)
+* [Admin Users Session](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/admin-users-session.md)
+* [Api](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/api.md)
+* [Apps Event Authorizations](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/apps-event-authorizations.md)
+* [Apps Permissions](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/apps-permissions.md)
+* [Apps Permissions Resources](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/apps-permissions-resources.md)
+* [Apps Permissions Scopes](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/apps-permissions-scopes.md)
+* [Apps Permissions Users](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/apps-permissions-users.md)
+* [Apps](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/apps.md)
+* [Auth](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/auth.md)
+* [Bots](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/bots.md)
+* [Calls](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/calls.md)
+* [Calls Participants](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/calls-participants.md)
+* [Chat](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/chat.md)
+* [Chat Scheduled Messages](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/chat-scheduled-messages.md)
+* [Conversations](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/conversations.md)
+* [Dialog](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/dialog.md)
+* [Dnd](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/dnd.md)
+* [Emoji](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/emoji.md)
+* [Files Comments](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/files-comments.md)
+* [Files](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/files.md)
+* [Files Remote](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/files-remote.md)
+* [Migration](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/migration.md)
+* [Oauth](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/oauth.md)
+* [Oauth V 2](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/oauth-v-2.md)
+* [Pins](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/pins.md)
+* [Reactions](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/reactions.md)
+* [Reminders](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/reminders.md)
+* [Rtm](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/rtm.md)
+* [Search](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/search.md)
+* [Stars](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/stars.md)
+* [Team](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/team.md)
+* [Team Profile](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/team-profile.md)
+* [Usergroups](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/usergroups.md)
+* [Usergroups Users](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/usergroups-users.md)
+* [Users](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/users.md)
+* [Users Profile](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/users-profile.md)
+* [Views](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/views.md)
+* [Workflows](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/controllers/workflows.md)
 
 ## SDK Infrastructure
 
 ### Configuration
 
-* [HttpClientOptions](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/http-client-options.md)
-* [RetryConfiguration](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/retry-configuration.md)
-* [ProxySettings](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/proxy-settings.md)
-* [Configuration-Based Client Initialization](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/configuration-based-client-initialization.md)
-* [Environment-Based Client Initialization](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/environment-based-client-initialization.md)
-* [PartialLoggingOptions](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/partial-logging-options.md)
-* [PartialRequestLoggingOptions](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/partial-request-logging-options.md)
-* [PartialResponseLoggingOptions](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/partial-response-logging-options.md)
-* [LoggerInterface](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/logger-interface.md)
+* [HttpClientOptions](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/http-client-options.md)
+* [RetryConfiguration](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/retry-configuration.md)
+* [ProxySettings](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/proxy-settings.md)
+* [Configuration-Based Client Initialization](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/configuration-based-client-initialization.md)
+* [Environment-Based Client Initialization](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/environment-based-client-initialization.md)
+* [PartialLoggingOptions](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/partial-logging-options.md)
+* [PartialRequestLoggingOptions](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/partial-request-logging-options.md)
+* [PartialResponseLoggingOptions](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/partial-response-logging-options.md)
+* [LoggerInterface](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/logger-interface.md)
 
 ### HTTP
 
-* [HttpRequest](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/http-request.md)
+* [HttpRequest](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/http-request.md)
 
 ### Utilities
 
-* [ApiResponse](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/api-response.md)
-* [ApiError](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.1/doc/api-error.md)
+* [ApiResponse](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/api-response.md)
+* [ApiError](https://www.github.com/sdks-io/slack-api-js-sdk/tree/1.1.2/doc/api-error.md)
 
