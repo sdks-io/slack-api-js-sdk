@@ -71,7 +71,7 @@ export class Client implements ClientInterface {
     };
 
     this._userAgent = updateUserAgent(
-      'TypeScript-SDK/1.1.0 [OS: {os-info}, Engine: {engine}/{engine-version}]'
+      'TypeScript-SDK/1.1.1 [OS: {os-info}, Engine: {engine}/{engine-version}]'
     );
     this._requestBuilderFactory = createRequestHandlerFactory(
       (server) => getBaseUri(server, this._config),
